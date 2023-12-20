@@ -8,7 +8,7 @@
 
 <body>	
 	<script>
-		function secondHighest(arr) {
+		function secondHighest(arr, n) {
 			//Write your code here
 			 // First, sort the array and find the first_largest element present in the array (at the last position).
 			arr.sort();
@@ -24,15 +24,10 @@
 			return second_largest;
 		}
 
-		function Main() {
-			var n = prompt("Enter the number of elements");
-			var arr = [];
-			for (var i = 0; i < n; i++) {
-				arr[i] = prompt("Enter element " + (i+1));
-			}
-			alert(secondHighest(arr));
-		}
-		Main();
+		const a = [12, 35, 1, 10, 34, 1];
+		let n = a.length;
+		let answer = secondHighest(a, n);
+		console.log("The second largest element in the array is: " + answer);
 	</script>
 
     <script type="text/javascript" src="./script.js">
