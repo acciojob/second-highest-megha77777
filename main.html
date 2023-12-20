@@ -10,7 +10,18 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			
+			 // First, sort the array and find the first_largest element present in the array (at the last position).
+			arr.sort();
+			let second_largest = 0;
+			// Now for the second_largest element, we need to start from second last element as the largest element is at last
+			for(let i=n-2; i>=0; i--){
+				 // If the last and second last element are equal then check the previous one else return the second last element.
+				if(arr[i] != arr[n-1]){
+					second_largest = arr[i];
+					break;
+				}
+			}
+			return second_largest;
 		}
 
 		function Main() {
